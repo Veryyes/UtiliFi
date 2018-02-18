@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Graph from './Graph.js';
 import Sidebar from './Sidebar.js';
+import Banner from './Banner.js';
 
 class App extends Component {
   constructor(props){
@@ -35,7 +36,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-	  <script type="text/javascript" src="https://env-83226.customer.cloud.microstrategy.com/MicroStrategyLibrary/javascript/embeddinglib.js"></script>
+		<Banner />
 		<Sidebar onChangeGraph={this.onChangeGraph}/>
 		<Graph url={this.state.url}/>
       </div>

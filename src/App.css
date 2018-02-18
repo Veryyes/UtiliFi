@@ -2,8 +2,13 @@
   text-align: center;
 }
 
-.Graph{
+.Banner{
+	padding:1.5em;
+	background-color:orange;
+}
 
+.Graph{
+	margin-top: 2em;
 }
 
 .Sidebar{
