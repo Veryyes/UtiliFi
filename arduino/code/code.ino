@@ -2,6 +2,7 @@
 #define gasAnalog A0
 #define waterAnalog A1
 #define powerDig 13
+#define watervcc 10
 
 #define resistor 1 
 //(1 Ohm Resistor)
@@ -16,6 +17,7 @@ void setup(){
   waterTotal=0;
   energy=0;
   i = 0;
+  digitalWrite(watervcc, HIGH);
   Serial.begin(9600);
 }
 
