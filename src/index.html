@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title></title>
+    <!--script type="text/javascript" src="https://env-83226.customer.cloud.microstrategy.com/MicroStrategyLibrary/javascript/embeddinglib.js"></script-->
+    <script type="text/javascript" src="./embeddinglib.js"></script>
+
+  </head>
+  <body>
+    <div id="mydossier0" height="100%" width="100%"></div>
+    <div id="mydossier1" height="100%" width="100%"></div>
+    <div id="mydossier2" height="100%" width="100%"></div>
+    <div id="mydossier3" height="100%" width="100%"></div>
+    <div id="mydossier4" height="100%" width="100%"></div>
+	other stuff
+
+    <script type="text/javascript">
+	  var Dossier;
+      var index=0;
+	  var frameSize = 2;
+	  let containers = []
+	  for(i=0; i < frameSize; i++){
+			containers.push(document.getElementById("mydossier"+i));
+			console.log(containers[i]);
+	  }
+	index ++;
+	url = "https://env-83226.customer.cloud.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/4F4A4A4A11E814241E090080EFC5EF0C";
+	microstrategy.dossier.create({
+   	    url: url,
+   	    enableResponsive: true,
+        placeholder: containers[0]
+    }).then(function(dossier){
+		console.log("FUCK");
+		console.log(dossier);
+		//Dossier = dossier;
+		console.log(Dossier);
+	});
+			//console.log(microstrategy.dossier);
+
+	 // var container = document.getElementById("mydossier0");
+	//  var url = "https://env-83226.customer.cloud.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/4F4A4A4A11E814241E090080EFC5EF0C";
+		//load(containers[0]);
+		
+  /*    setInterval(function(){
+			//console.log(Dossier.getTableContent());
+			console.log("Refresh " + index);
+			//Hide Old Buffer
+			containers[index].style.display = "none" //set display to false
+			//Pull out loaded buffer
+			containers[(index+1)%frameSize].style.display = "" //set display to true
+			//Load Next Two
+			//container = containers[(index)%frameSize];
+			load(containers[(index)%frameSize]);
+			containers[index].style.display = "none" //set display to false
+			//load(containers[(index+2)%frameSize]);
+			index = (index+1)%frameSize;
+			
+		}, 100000);
+/*
+		function load(container) {
+		//console.log(container)
+		url = "https://env-83226.customer.cloud.microstrategy.com/MicroStrategyLibrary/app/B7CA92F04B9FAE8D941C3E9B7E0CD754/4F4A4A4A11E814241E090080EFC5EF0C";
+
+        microstrategy.dossier.create({
+      	    url: url,
+       	    enableResponsive: true,
+       	    placeholder: container
+       	  }).then(function(dossier){
+				console.log("FUCK");
+				console.log(dossier);
+				
+				//Dossier = dossier;
+				console.log(Dossier);
+			});
+			//console.log(microstrategy.dossier);
+		};
+*/
+    </script>
+  </body>
+</html>
+
