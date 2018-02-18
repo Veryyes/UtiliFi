@@ -3,6 +3,9 @@ import './App.css';
 import Graph from './Graph.js';
 import Sidebar from './Sidebar.js';
 import Banner from './Banner.js';
+import gas from './gas-station.png';
+import water from './water-tap.png';
+import power from './plug.png';
 
 class App extends Component {
   constructor(props){
@@ -38,10 +41,25 @@ class App extends Component {
       <div className="App">
 		<Banner />
 		<Sidebar onChangeGraph={this.onChangeGraph}/>
+		<div style={{height: "25px"}}> </div>
+		<Icon src={gas} dim={128}/>
+		<Icon src={water} dim={128}/>
+		<Icon src={power} dim={128}/>
 		<Graph url={this.state.url}/>
+
       </div>
     );
   }
+}
+
+class Icon extends Component{
+	render(){
+		return(
+			<div className="Icon">
+				<img src={this.props.src} alt="" style={{width: this.props.dim, height: this.props.dim}}/>
+			</div>
+		);
+	}
 }
 
 export default App;

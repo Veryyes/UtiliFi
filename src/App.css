@@ -4,7 +4,7 @@
 
 .Banner{
 	padding:1.5em;
-	background-color:orange;
+	background-color:#292C44;
 }
 
 .Graph{
@@ -17,16 +17,30 @@
 
 .BoxHeader{
 	padding: 2em;
-	background-color:Blue;
+	background-color:#4F80E1;
+
+	border-bottom: 1px solid black;
+	
+	border-right: 2px solid black;
 }
 .Box{
 	padding: 2em;
-	background-color:red;
+	background-color:#18CDCA;
+	border-bottom: 1px solid black;
+
+	border-right: 2px solid black;
 }
 
 .BoxFooter{
 	padding-left: 2em;
 	height:30em;
-	background-color:green;
+	background-color:#FF5349;
 	overflow: hidden;
+	
+	border-right: 2px solid black;
+}
+
+.Icon{
+	display:inline;
+	margin: 4em;
 }
