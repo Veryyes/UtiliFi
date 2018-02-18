@@ -46,14 +46,18 @@ void loop(){
   
   getInputs(&gasFlow, &waterFlow, &power);
   doRiemman(gasFlow, waterFlow, power, &gasTotal, &waterTotal, &energy);
+  Serial.println("START");
+  Serial.println(gasFlow);
+  
+  Serial.println(gasTotal);
 
-  Serial.write(gasFlow);
-  Serial.write(gasTotal);
-  Serial.write(waterFlow);
-  Serial.write(waterTotal);
-  Serial.write(power);
-  Serial.write(energy);
+  Serial.println(waterFlow);
 
+  Serial.println(waterTotal);
+
+  Serial.println(power);
+
+  Serial.println(energy);
   i++;
   delay(deltat*1000);
 }
